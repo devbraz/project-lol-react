@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../pages/Login";
+import TesteRoute from "../pages/TesteRoute";
 
 export default function RoutesLogic() {
 
@@ -11,6 +12,10 @@ export default function RoutesLogic() {
         <Route
           path="/login"
           element={<Login />}
+        />
+        <Route
+          path="/"
+          element={<TesteRoute />}
         />
       </Routes>
     </BrowserRouter>
