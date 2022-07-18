@@ -1,10 +1,12 @@
 import Button from "../Button";
 import LoginInfoModal from "../LoginInfoModal";
+import LoginUserModal from "../LoginUserModal";
+import ImgJinx from '../../Assets/Img/wallpaperflare.com_wallpaper.jpg'
 import {
   ImgContainerLogin,
   MinimizeAndCloseButton,
   InfoAndUserModal,
-  ImgLogin
+  Images
 } from "./styles";
 
 
@@ -14,17 +16,14 @@ export default function LoginImgContainer() {
   return (
     <ImgContainerLogin>
       <MinimizeAndCloseButton>
-        <Button></Button>
-        <Button></Button>
+        <Button className='minimize'>_</Button>
+        <Button>x</Button>
       </MinimizeAndCloseButton>
       <InfoAndUserModal>
-        <LoginInfoModal></LoginInfoModal>
-        <Button></Button>
+        <LoginInfoModal />
+        <LoginUserModal />
       </InfoAndUserModal>
-      <ImgLogin>
-        <img src="" alt="" />
-      </ImgLogin>
-
+      <Images src={ImgJinx} alt="Riot" />
     </ImgContainerLogin>
   );
 }

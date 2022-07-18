@@ -1,18 +1,20 @@
 import * as React from 'react';
 import Modal from '@mui/material/Modal';
-import { Container, Box, DivButton } from './styles';
+import { Container, Box, ButtonDiv } from './styles';
 import Button from '../Button';
+import { FaUser } from 'react-icons/fa'
 
-export default function LoginInfoModal() {
+export default function LoginUserModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <Container>
-      <DivButton>
-        <Button onClick={handleOpen}>!</Button>
-      </DivButton>
+      <ButtonDiv>
+        <FaUser />
+        <Button onClick={handleOpen}></Button>
+      </ButtonDiv>
       <Modal
         open={open}
         onClose={handleClose}
