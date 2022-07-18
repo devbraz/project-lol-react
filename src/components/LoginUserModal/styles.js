@@ -4,7 +4,6 @@ export const Container = styled.div`
 
 
 `
-
 export const Box = styled.div`
 
   position: absolute;
@@ -30,6 +29,7 @@ export const ButtonDiv = styled.div`
   border-radius: 15px;
   width: 45px;
   height: 45px;
+  
 
   svg {
     position: fixed;
@@ -44,11 +44,23 @@ export const ButtonDiv = styled.div`
     width: 45px;
     height: 45px;
     background: black;
-    filter: opacity(0.1) drop-shadow(0 0 0 white);
+    filter: opacity(0.1) drop-shadow(0 0 0 grey);
     border: none;
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.3s ease-out;
     
+  }
+
+  :hover {
+
+    button {
+
+      transition: all 0.3s ease-out;
+      filter: opacity(0.1) drop-shadow(0 0 0 white);
+
+    }
+      
   }
 
 `

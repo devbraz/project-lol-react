@@ -20,6 +20,9 @@ export const GlobalStyle = createGlobalStyle`
       --fml-Titillium-Web:'Titillium Web', sans-serif;
 
     }
+    #detach-button-host {
+      display: none !important;
+    }
 
     *{
         margin: 0;
