@@ -6,8 +6,9 @@ import { FaUser } from 'react-icons/fa'
 
 export default function LoginUserModal() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false);
+  const [online, setOnline] = React.useState(false)
 
   return (
     <Container>
@@ -22,12 +23,13 @@ export default function LoginUserModal() {
         aria-describedby="modal-modal-description"
       >
         <Box>
-          <h2>
-            Text in a modal
-          </h2>
-          <p>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </p>
+          <Button>CONFIGURAÇÕES</Button>
+          {online ?
+            <Button>ENCERRAR SESSÃO</Button>
+            :
+            <Button className='disabled' disabled>ENCERRAR SESSÃO</Button>
+          }
+          <Button>SAIR</Button>
         </Box>
       </Modal>
     </Container>

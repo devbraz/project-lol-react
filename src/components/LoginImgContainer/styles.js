@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ImgContainerLogin = styled.div`
+export const VideoContainerLogin = styled.div`
 
   width: 75%;
   height: 100vh;
@@ -15,6 +15,10 @@ export const MinimizeAndCloseButton = styled.div`
   width: 75%;
   z-index: 1;
 
+  div {
+    
+  }
+
   button {
 
     width: 40px;
@@ -22,7 +26,7 @@ export const MinimizeAndCloseButton = styled.div`
     border: none;
     background: none;
     font-size: 1.5rem;
-    padding: 0 10px 0 10px;
+    padding: 5px 10px 0 10px;
     color: var(--color-login-background-input);
     cursor: pointer;
 
@@ -51,8 +55,8 @@ export const MinimizeAndCloseButton = styled.div`
 
     }
     :hover {
-      background: white;
-      filter: opacity(0.4) drop-shadow(0 0 0 white);
+      background: var(--color-login-background-input);
+      filter: opacity(0.2) drop-shadow(0 0 0 var(--color-login-modal-background));
       svg {
         fill: white;
       }
@@ -66,7 +70,7 @@ export const InfoAndUserModal = styled.div`
  justify-content: space-between;
  position: fixed;
  width: 75%;
- padding: 30px 25px 0 25px;
+ padding: 45px 2.5rem 0 2.5rem;
 
 
 `
@@ -79,5 +83,12 @@ export const Video = styled.video`
   object-fit: cover;
   transform: translate(0, -50%);
   z-index: -1;
+  animation-duration: 3s;
+  animation-name: mymove;
+
+  @keyframes mymove {
+    from {background: white;}
+    to {background: black;}
+}
 
 `
